@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <script src="preg.js"></script>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Relaves Mineros en Chile</title>
+    <style>
+        /* Estilos adicionales para personalizar la apariencia de la página */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #map-container {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #map {
+            width: 80%;
+            height: 80%;
+        }
+        #relaves-info {
+            margin-top: 20px;
+        }
+        #relaves-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #relaves-info li {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        #relaves-info h3 {
+            margin-bottom: 5px;
+        }
+        #relaves-info p {
+            display: none;
+        }
+        .medium-image {
+            width: 300px;
+            margin-top: 20px;
+        }
+        #imagenes {
+            margin-top: 20px;
+        }
+        .large-image {
+            margin-right: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var questions = document.querySelectorAll('#relaves-info li');
+
+            questions.forEach(function (question) {
+                question.addEventListener('click', function () {
+                    var answer = this.querySelector('p');
+                    answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Relaves Mineros en Chile</h1>
+
+    <div id="map-container">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1P3T-ogJPSJwUoujo6wJZRgw7LsKPNoM&ehbc=2E312F" width="80%" height="100%"></iframe>
+    </div>
+     
+    <h1>Fotos </h1>
+
+    <div id="imagenes">
+        <img class="large-image" src="imagenes/1.png" alt="Image 1">
+        <img class="large-image" src="imagenes/2.jpg" alt="Image 2">
+        <img class="large-image" src="imagenes/3.jpg" alt="Image 3">
+    </div>
+
+    <div id="relaves-info">
+        <h2>Preguntas y Respuestas sobre los Relaves</h2>
+        <ul>
+            <li>
+                <h4>¿Qué es el relave?</h4>
+                <p>El relave es un sólido finamente molido, que se descarta en operaciones mineras. Se compone principalmente de material no económico.</p>
+            </li>
+            <li>
+                <h4>¿Es el relave un residuo contaminante?</h4>
+                <p>Los relaves pueden contener minerales contaminantes que, en ciertas concentraciones, pueden ser tóxicos para el ser humano y el medio ambiente. Es necesario tomar medidas para evitar la movilización de estos elementos.</p>
+            </li>
+            <li>
+                <h4>¿Es el relave un residuo sólido peligroso?</h4>
+                <p>El relave de minería no se considera un Residuo Sólido Peligroso (RSP) ya que no es producido por actividades humanas, sino que proviene de rocas naturales.</p>
+            </li>
+            <li>
+                <h4>¿Qué es un Depósito de Relaves?</h4>
+                <p>Es una estructura de ingeniería diseñada para aislar completamente los sólidos (relaves) depositados del ecosistema circundante, cumpliendo con las exigencias legales.</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
